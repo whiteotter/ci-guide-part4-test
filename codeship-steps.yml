@@ -1,5 +1,9 @@
 - service: app
   command: whoami
+- service: app
+  command: ls -al ../
+- service: app
+  command: /bin/sh -c 'cat /etc/passwd | grep ec2-user'
 - name: initialize_local_settings
   service: app
   command: cp /mothership/README.md /mothership/test
