@@ -6,8 +6,9 @@ FROM centos:centos7.5.1804
 RUN groupadd --gid 500 ec2-user && \ 
 useradd --system --create-home --shell /bin/false --uid 500 --gid ec2-user ec2-user
 
-RUN mkdir /mothership && \ 
-chown -R ec2-user:ec2-user /mothership
+RUN ["mkdir". "/mothership"]
+
+RUN ["chown", "-R", "ec2-user:ec2-user", "/mothership"]
 
 USER ec2-user
 
