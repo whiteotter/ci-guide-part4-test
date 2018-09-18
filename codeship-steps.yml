@@ -1,0 +1,5 @@
+- type: serial 
+  steps: 
+    - name: initialize_local_settings
+      service: app
+      command: cp /mothership/README.md /mothership/test
