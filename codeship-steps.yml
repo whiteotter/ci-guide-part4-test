@@ -1,5 +1,7 @@
 - service: app
   command: whoami
+- service: app
+  command: chown -R ec2-user:ec2-user /mothership
 - name: check on user
   service: app
   command: /bin/sh -c 'cat /etc/passwd | grep ec2-user'
