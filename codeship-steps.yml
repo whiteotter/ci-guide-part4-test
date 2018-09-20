@@ -1,9 +1,11 @@
 - service: app
   command: whoami
-- service: app
-  command: ls -al ../
-- service: app
+- name: check on user
+  service: app
   command: /bin/sh -c 'cat /etc/passwd | grep ec2-user'
-- name: initialize_local_settings
+- name: check ownership of mothership directory
+  service: app
+  command: /bin/sh -c 'ls -al ../ | grep mothership'
+- name: attempt to write to mothership directory
   service: app
   command: cp /mothership/README.md /mothership/test
