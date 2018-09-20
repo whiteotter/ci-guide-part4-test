@@ -11,5 +11,3 @@ RUN ["useradd", "--system", "--create-home", "--shell", "/bin/false", "--uid", "
 # RUN ["chown", "-R", "ec2-user:ec2-user", "/mothership"]
 
 USER ec2-user
-
-WORKDIR /mothership
