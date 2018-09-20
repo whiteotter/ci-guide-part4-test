@@ -9,3 +9,5 @@ RUN ["chown", "-R", "ec2-user:ec2-user", "/mothership"]
 COPY --chown=ec2-user:ec2-user . .
 
 USER ec2-user
+
+RUN ["mkdir", "/data"]
