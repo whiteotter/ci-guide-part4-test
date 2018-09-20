@@ -1,13 +1,14 @@
 - service: app
   command: whoami
-- service: app
-  command: chown -R ec2-user:ec2-user /mothership
 - name: check on user
   service: app
   command: /bin/sh -c 'cat /etc/passwd | grep ec2-user'
 - name: check ownership of mothership directory
   service: app
-  command: /bin/sh -c 'ls -al ../ | grep mothership'
+  command: /bin/sh -c 'ls -al / | grep mothership'
+- name: check contents of mothership directory
+  service: app
+  command: ls -al
 - name: attempt to write to mothership directory
   service: app
   command: cp /mothership/README.md /mothership/test
