@@ -12,3 +12,6 @@
 - name: attempt to write to mothership directory
   service: app
   command: cp /mothership/README.md /mothership/test
+- name: attempt to volume mapped /data folder
+  service: app
+  command: cp /mothership/README.md /data/test
